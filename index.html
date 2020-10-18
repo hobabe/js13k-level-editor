@@ -1,8 +1,57 @@
+<!doctype html>
+<html lang="en">
 
-<script src=l.js></script>
-<script>
-onload=function(){
-  d=load_level(decodeURI(location.hash.slice(1)));
-  document.body.innerHTML="<tt>d="+JSON.stringify(d);
-}
-</script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>Checkout example · Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/src/css/main.css"" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!-- Favicons -->
+  <meta name="theme-color" content="#563d7c">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.js"></script>
+
+  <script type="module" src="src/js/editor.js"></script>
+  <script src="src/js/wiget-left.js"></script>
+</head>
+
+<body class="bg-light">
+  <div id="app" class="container">
+    <div class="py-2 text-center">
+      <h2>Map Generator</h2>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="row">
+      <div class="col-md-4 mb-4" id="wiget-left">
+        <wiget-left :data-map="map"></wiget-left>
+      </div>
+      <div class="col-md-8">
+        <h4 class="mb-3">DESIGN</h4>
+        <editor-map :data-map="map"></editor-map>
+
+      </div>
+    </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">&copy; 2017-2020 Company Name</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+  </div>
+  <script src=l.js></script>
+  <script type="module" src="src/js/App.js"></script>
+</body>
+
+</html>

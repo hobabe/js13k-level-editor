@@ -18,7 +18,7 @@
   </div>
 <p>
   <div id=D style="border:1px solid;width:98vw;height:65vh;overflow:auto;position:relative">
-    <canvas id=A oncontextmenu=return!1 onmouseup=m=0 onmousedown=m=event.which;A.onmousemove(event)>
+    <canvas id=A onmouseup=m=0 onmousedown=m=event.which;A.onmousemove(event)>
   </div>
 <br>
 Text output: <a id=download download=map.txt href="">Download</a>
@@ -154,6 +154,7 @@ onhashchange=()=>{
 // =============
 
 T=0;
+console.log('157');
 a.onclick=e=>{
 
   // T = tile index
@@ -172,7 +173,7 @@ A.onmousemove=e=>{
   R=A.getBoundingClientRect();
   X=~~((e.pageX-R.left)/d.t);
   Y=~~((e.pageY-R.top-document.body.scrollTop-document.documentElement.scrollTop)/d.t);
-  
+  console.log(X,Y);
   // Remove the tile at these coordinates id left/right click is pressed
   if(m){
     if(d.z){
